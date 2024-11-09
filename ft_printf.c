@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:47:20 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/08 21:04:02 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2024/11/09 17:23:45 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,15 @@ static int print_format(char c, va_list args)
 	if (c == 'c')
 		len += ft_putchar(va_arg(args, int));
 	else if (c == 'i' || c == 'd')
-		len += ft_putnbr(va_arg(args, int));
+		len += ft_putnbr_base(va_arg(args, int), "0123456789");
 	else if (c == 's')
 		len += ft_putstr(va_arg(args, char *));
 	// else if (c == 'p')
 	// 	len += ft_putpointer(va_arg(args, char));
-	// else if (c == 'x')
-	// 	len += ft_puthex(va_arg(args, char *));
-	// else if (c == 'X')
-	// 	len += ft_putHEX(va_arg(args, char *));
+	else if (c == 'x')
+		len += ft_putnbr_base(va_arg(args, int), "0123456789abcdef");
+	else if (c == 'X')
+		len += ft_putnbr_base(va_arg(args, int), "0123456789ABCDEF");
 	// else if (c == 'u')
 	// 	len += ft_putunsignedint(va_arg(args, char *));
 

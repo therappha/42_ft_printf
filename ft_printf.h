@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 19:27:10 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/08 20:44:35 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2024/11/09 17:25:38 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 # include <stdlib.h>
 
 int	ft_printf(const char *str, ...);
-int	ft_putnbr(int n);
+int	ft_putnbr_base(int n, char *base);
 int ft_putchar(char c);
 int	ft_putstr(const char *str);
+int	ft_strlen(char *str);
 
 #endif
