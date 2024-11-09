@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:47:20 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/09 17:23:45 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:02:20 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_printf(const char *str, ...)
 static int print_format(char c, va_list args)
 {
 	int	len;
-	//puxX
+
 	len = 0;
 	if (c == 'c')
 		len += ft_putchar(va_arg(args, int));
@@ -51,14 +51,14 @@ static int print_format(char c, va_list args)
 		len += ft_putnbr_base(va_arg(args, int), "0123456789");
 	else if (c == 's')
 		len += ft_putstr(va_arg(args, char *));
-	// else if (c == 'p')
-	// 	len += ft_putpointer(va_arg(args, char));
+	else if (c == 'p')
+		len += ft_putptr(va_arg(args, void *));
 	else if (c == 'x')
-		len += ft_putnbr_base(va_arg(args, int), "0123456789abcdef");
+		len += ft_putnbr_base(va_arg(args, unsigned int), "0123456789abcdef");
 	else if (c == 'X')
-		len += ft_putnbr_base(va_arg(args, int), "0123456789ABCDEF");
-	// else if (c == 'u')
-	// 	len += ft_putunsignedint(va_arg(args, char *));
+		len += ft_putnbr_base(va_arg(args, unsigned int), "0123456789ABCDEF");
+	else if (c == 'u')
+		len += ft_put_uint(va_arg(args, unsigned int));
 
 	return (len);
 }

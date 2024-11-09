@@ -1,28 +1,33 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 12:01:09 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/09 17:27:29 by rafaelfe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+// /* ************************************************************************** */
+// /*                                                                            */
+// /*                                                        :::      ::::::::   */
+// /*   main.c                                             :+:      :+:    :+:   */
+// /*                                                    +:+ +:+         +:+     */
+// /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
+// /*                                                +#+#+#+#+#+   +#+           */
+// /*   Created: 2024/11/09 20:40:45 by rafaelfe          #+#    #+#             */
+// /*   Updated: 2024/11/09 21:04:47 by rafaelfe         ###   ########.fr       */
+// /*                                                                            */
+// /* ************************************************************************** */
 
-#include <stdio.h>
 
-#include "ft_printf.h"
+// #include <stdio.h>
 
-int	main(void)
-{
-	ft_printf("Hello %s!\n", "World");
-	ft_printf("Hello %d!\n", 25);
-	ft_printf("Hello %d and %i!\n", -42, 42);
-	ft_printf("this is a %c!\n", 'x');
-	ft_printf("this is 10 in hex: %x\n", 10);
-	ft_printf("this is 10 in HEX: %X\n", 10);
-	ft_printf("Original:\n");
-	printf("this is 10 in hex: %x\n", 10);
-	printf("this is 10 in HEX: %X\n", 10);
-}
+// #include "ft_printf.h"
+
+// int	main(void)
+// {
+// 	int	number = 42;
+
+// 	ft_printf("mine: ' '%p'\n", &number);
+// 	printf("original:  '%p'\n", &number);
+// 	ft_printf("mine: '%p'\n", 42);
+// 	printf("original: '%p'\n", 42);
+
+
+// 	ft_printf("mine: '%u'\n", -42);
+// 	printf("original: '%u'\n", -42);
+
+// }
+
+

@@ -12,7 +12,7 @@ OBJS = $(SRCS:.c=.o)
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 all : $(NAME)
 

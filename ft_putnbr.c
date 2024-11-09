@@ -6,19 +6,26 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 20:44:43 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/09 17:25:52 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:27:54 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_nbrsize(int n, int base)
+static int	ft_strsize(char *str)
 {
-	long	nmbr;
+	int	i;
+
+	i = 0;
+	while(str[i])
+		i++;
+	return (i);
+}
+int	ft_nbrsize(long nmbr, long base)
+{
 	int		numlen;
 
 	numlen = 0;
-	nmbr = n;
 	if (nmbr == 0)
 		return (1);
 	if (nmbr < 0)
@@ -34,13 +41,11 @@ static int	ft_nbrsize(int n, int base)
 	return (numlen);
 }
 
-static int	ft_putnbr_itoa(int n, char *str, int i, char *base)
+static int	ft_putnbr_itoa(long nmbr, char *str, int i, char *base)
 {
-	long	nmbr;
-	int		baselen;
+	int	baselen;
 
-	nmbr = n;
-	baselen = ft_strlen(base);
+	baselen = ft_strsize(base);
 	if (nmbr < 0)
 	{
 		str[i] = '-';
@@ -61,13 +66,13 @@ static int	ft_putnbr_itoa(int n, char *str, int i, char *base)
 	return (i);
 }
 
-int	ft_putnbr_base(int n, char *base)
+int	ft_putnbr_base(long n, char *base)
 {
 	int		i;
 	char	*result;
 	int		baselen;
 
-	baselen = ft_strlen(base);
+	baselen = ft_strsize(base);
 	result = (char *)malloc(ft_nbrsize(n, baselen) + 1);
 	if (!result)
 		return (0);
@@ -75,15 +80,5 @@ int	ft_putnbr_base(int n, char *base)
 	result[i] = '\0';
 	ft_putstr(result);
 	free(result);
-	return (i);
-}
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while(str[i])
-		i++;
 	return (i);
 }
