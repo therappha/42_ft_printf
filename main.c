@@ -6,7 +6,7 @@
 // /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 // /*                                                +#+#+#+#+#+   +#+           */
 // /*   Created: 2024/11/09 20:40:45 by rafaelfe          #+#    #+#             */
-// /*   Updated: 2024/11/09 21:30:23 by rafaelfe         ###   ########.fr       */
+// /*   Updated: 2024/11/09 21:52:51 by rafaelfe         ###   ########.fr       */
 // /*                                                                            */
 // /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 // int	main(void)
 // {
-// 	int nullstr;
+// 	int nullstr = 42;
 
-// 	printf("%s", nullstr);
-// 	ft_printf("%s", nullstr);
+// 	ft_printf("%p\n", 42);
+// 	printf("%p\n", 42);
 // }
 
 

@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:47:20 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/09 21:02:20 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:44:02 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include "ft_printf.h"
 
 static int	ft_strhas(char *str, char c);
-static int print_format(char c, va_list args);
+static int	print_format(char c, va_list args);
 
 int	ft_printf(const char *str, ...)
 {
-	va_list args;
-	va_start(args, str);
-	int	len;
+	va_list	args;
+	int		len;
 
+	va_start(args, str);
 	len = 0;
 	while (*str)
 	{
@@ -34,13 +34,14 @@ int	ft_printf(const char *str, ...)
 				len += ft_putchar(*str);
 		}
 		else
-			len+= ft_putchar(*str);
+			len += ft_putchar(*str);
 		str++;
 	}
 	va_end(args);
 	return (len);
 }
-static int print_format(char c, va_list args)
+
+static int	print_format(char c, va_list args)
 {
 	int	len;
 
@@ -59,9 +60,9 @@ static int print_format(char c, va_list args)
 		len += ft_putnbr_base(va_arg(args, unsigned int), "0123456789ABCDEF");
 	else if (c == 'u')
 		len += ft_put_uint(va_arg(args, unsigned int));
-
 	return (len);
 }
+
 static int	ft_strhas(char *str, char c)
 {
 	while (*str)

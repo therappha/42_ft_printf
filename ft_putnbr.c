@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 20:44:43 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/09 20:27:54 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:46:55 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ static int	ft_strsize(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
 	return (i);
 }
+
 int	ft_nbrsize(long nmbr, long base)
 {
 	int		numlen;

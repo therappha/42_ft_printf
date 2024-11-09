@@ -12,7 +12,8 @@
 
 #include "ft_printf.h"
 
-static int	ft_unsigned_base(unsigned long n, char *base, unsigned int baselen, int i)
+static int	ft_unsigned_base(unsigned long n, char *base
+	, unsigned int baselen, int i)
 {
 	if (n >= baselen)
 		i = ft_unsigned_base((n / baselen), base, baselen, i);
@@ -20,7 +21,7 @@ static int	ft_unsigned_base(unsigned long n, char *base, unsigned int baselen, i
 	return (i);
 }
 
-int ft_putptr(void *address)
+int	ft_putptr(void *address)
 {
 	unsigned long	addr;
 	int				len;
@@ -34,7 +35,7 @@ int ft_putptr(void *address)
 	return (len);
 }
 
-int ft_put_uint(unsigned int nbr)
+int	ft_put_uint(unsigned int nbr)
 {
 	int		len;
 
