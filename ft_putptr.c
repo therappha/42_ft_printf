@@ -27,7 +27,7 @@ int ft_putptr(void *address)
 
 	len = 0;
 	if (!address)
-		return (ft_putstr("0x0"));
+		return (ft_putstr("(nil)"));
 	addr = (unsigned long)address;
 	len += ft_putstr("0x");
 	len += ft_unsigned_base(addr, "0123456789abcdef", 16, 0);

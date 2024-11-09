@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putchars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:21:14 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/08 18:26:35 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:30:09 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int ft_putchar(char c)
 int	ft_putstr(const char *str)
 {
 	int	i;
+
+	if (!str)
+		return (ft_putstr("(null)"));
+
 
 	i = 0;
 	while (*str)
