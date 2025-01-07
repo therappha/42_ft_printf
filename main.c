@@ -6,10 +6,9 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 20:40:45 by rafaelfe          #+#    #+#             */
-/*   Updated: 2024/11/11 16:39:52 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:10:16 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <stdio.h>
 
@@ -19,5 +18,3 @@ int	main(void)
 {
 	ft_printf("Hello, World!\n");
 }
-
-
